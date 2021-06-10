@@ -52,6 +52,46 @@ input[type="text"] {
   border-bottom-right-radius: 4px;
 }
 
+.meals {
+  display: grid;
+  margin-top: 20px;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.meal {
+  height: 180px;
+  width: 180px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.meal img {
+  width: 100%;
+  height: 100%;
+  border: 4px #fff solid;
+  border-radius: 2px;
+}
+
+.meal-info {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease-in;
+  opacity: 0;
+}
+
+.meal:hover .meal-info {
+  opacity: 1;
+}
+
 @media (max-width: 800px) {
 }
 @media (max-width: 700px) {
